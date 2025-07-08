@@ -1,27 +1,31 @@
-import { Code, Palette, Zap, Users } from "lucide-react";
+import { Code, Palette, Zap, Users, Terminal, Cpu, Layers, Rocket } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 
 const About = () => {
   const features = [
     {
-      icon: Code,
-      title: "Clean Code",
-      description: "Writing maintainable, scalable, and efficient code following best practices."
+      icon: Terminal,
+      title: "Full Stack Development",
+      description: "Building end-to-end applications with modern JavaScript, TypeScript, and cutting-edge frameworks.",
+      gradient: "bg-gradient-primary"
     },
     {
-      icon: Palette,
-      title: "UI/UX Design",
-      description: "Creating beautiful interfaces with attention to user experience and accessibility."
+      icon: Rocket,
+      title: "Performance Optimization",
+      description: "Crafting lightning-fast applications with advanced optimization techniques and best practices.",
+      gradient: "bg-gradient-secondary"
     },
     {
-      icon: Zap,
-      title: "Performance",
-      description: "Optimizing applications for speed and performance across all devices."
+      icon: Layers,
+      title: "System Architecture",
+      description: "Designing scalable, maintainable architectures that grow with your business needs.",
+      gradient: "bg-gradient-neon"
     },
     {
-      icon: Users,
-      title: "Collaboration",
-      description: "Working effectively in teams using modern development workflows and tools."
+      icon: Cpu,
+      title: "Modern Tech Stack",
+      description: "Leveraging the latest technologies and tools to deliver exceptional user experiences.",
+      gradient: "bg-neon-cyan"
     }
   ];
 
@@ -57,33 +61,49 @@ const About = () => {
 
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
             {features.map((feature, index) => (
-              <Card key={index} className="card-bg border-border card-hover group">
-                <CardContent className="p-6 text-center">
-                  <div className="inline-flex items-center justify-center w-12 h-12 bg-gradient-primary rounded-lg mb-4 group-hover:scale-110 transition-transform duration-300">
-                    <feature.icon className="w-6 h-6 text-primary-foreground" />
+              <Card key={index} className="group relative bg-gradient-card neon-border card-hover overflow-hidden">
+                <div className={`absolute inset-0 opacity-10 ${feature.gradient} blur-xl transition-all duration-500 group-hover:opacity-20`}></div>
+                <CardContent className="relative z-10 p-6 text-center">
+                  <div className={`inline-flex items-center justify-center w-16 h-16 ${feature.gradient} rounded-xl mb-6 group-hover:scale-110 transition-all duration-300 shadow-neon`}>
+                    <feature.icon className="w-8 h-8 text-primary-foreground" />
                   </div>
-                  <h4 className="text-lg font-semibold mb-2">{feature.title}</h4>
-                  <p className="text-sm text-muted-foreground">{feature.description}</p>
+                  <h4 className="text-lg font-semibold mb-3 font-mono">{feature.title}</h4>
+                  <p className="text-sm text-muted-foreground leading-relaxed">{feature.description}</p>
                 </CardContent>
               </Card>
             ))}
           </div>
         </div>
 
-        <div className="bg-gradient-card rounded-2xl p-8 border border-border">
-          <h3 className="text-2xl font-semibold mb-6 text-center">Quick Facts</h3>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
-            <div>
-              <div className="text-3xl font-bold text-primary mb-2">3+</div>
-              <div className="text-muted-foreground">Years Experience</div>
+        <div className="terminal-window">
+          <div className="terminal-header">
+            <div className="flex items-center space-x-2">
+              <div className="w-3 h-3 rounded-full bg-red-500"></div>
+              <div className="w-3 h-3 rounded-full bg-yellow-500"></div>
+              <div className="w-3 h-3 rounded-full bg-green-500"></div>
+              <span className="ml-4 text-xs text-muted-foreground font-mono">stats.js</span>
             </div>
-            <div>
-              <div className="text-3xl font-bold text-accent mb-2">50+</div>
-              <div className="text-muted-foreground">Projects Completed</div>
+          </div>
+          <div className="p-8">
+            <div className="font-mono text-terminal-green mb-4">
+              <div>$ node stats.js</div>
             </div>
-            <div>
-              <div className="text-3xl font-bold text-purple-accent mb-2">100%</div>
-              <div className="text-muted-foreground">Client Satisfaction</div>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+              <div className="group">
+                <div className="text-4xl font-bold font-mono mb-2 bg-gradient-primary bg-clip-text text-transparent neon-pulse-animation">5+</div>
+                <div className="text-muted-foreground font-mono">Years Experience</div>
+                <div className="text-xs text-terminal-green mt-1 opacity-0 group-hover:opacity-100 transition-opacity">console.log('experience++');</div>
+              </div>
+              <div className="group">
+                <div className="text-4xl font-bold font-mono mb-2 bg-gradient-secondary bg-clip-text text-transparent neon-pulse-animation">100+</div>
+                <div className="text-muted-foreground font-mono">Projects Built</div>
+                <div className="text-xs text-terminal-green mt-1 opacity-0 group-hover:opacity-100 transition-opacity">git commit -m "shipped"</div>
+              </div>
+              <div className="group">
+                <div className="text-4xl font-bold font-mono mb-2 bg-gradient-neon bg-clip-text text-transparent neon-pulse-animation">24/7</div>
+                <div className="text-muted-foreground font-mono">Code Passion</div>
+                <div className="text-xs text-terminal-green mt-1 opacity-0 group-hover:opacity-100 transition-opacity">while(alive) {'{ code(); }'}</div>
+              </div>
             </div>
           </div>
         </div>

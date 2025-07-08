@@ -64,21 +64,37 @@ export default {
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
 				},
-				purple: {
-					accent: 'hsl(var(--purple-accent))'
+				neon: {
+					cyan: 'hsl(var(--neon-cyan))',
+					pink: 'hsl(var(--neon-pink))',
+					green: 'hsl(var(--neon-green))',
+					purple: 'hsl(var(--neon-purple))',
+					orange: 'hsl(var(--neon-orange))'
 				},
-				blue: {
-					accent: 'hsl(var(--blue-accent))'
+				terminal: {
+					green: 'hsl(var(--terminal-green))'
 				},
-				orange: {
-					accent: 'hsl(var(--orange-accent))'
+				code: {
+					blue: 'hsl(var(--code-blue))'
 				}
 			},
 			backgroundImage: {
 				'gradient-primary': 'var(--gradient-primary)',
 				'gradient-secondary': 'var(--gradient-secondary)',
 				'gradient-hero': 'var(--gradient-hero)',
-				'gradient-card': 'var(--gradient-card)'
+				'gradient-card': 'var(--gradient-card)',
+				'gradient-neon': 'var(--gradient-neon)',
+				'gradient-code': 'var(--gradient-code)',
+				'gradient-terminal': 'var(--gradient-terminal)'
+			},
+			fontFamily: {
+				'mono': ['JetBrains Mono', 'Fira Code', 'Consolas', 'Monaco', 'monospace'],
+			},
+			boxShadow: {
+				'neon': 'var(--shadow-neon)',
+				'glow': 'var(--shadow-glow)',
+				'purple': 'var(--shadow-purple)',
+				'cyan': 'var(--shadow-cyan)',
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
