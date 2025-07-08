@@ -2,41 +2,57 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
+/* Creative Portfolio Design System - Dark theme with vibrant accents */
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    --background: 222 84% 4.9%;
+    --foreground: 210 40% 98%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card: 222 84% 4.9%;
+    --card-foreground: 210 40% 98%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover: 222 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
 
-    --primary: 222.2 47.4% 11.2%;
+    --primary: 270 91% 65%;
     --primary-foreground: 210 40% 98%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 217 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --muted: 217 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --accent: 142 76% 36%;
+    --accent-foreground: 210 40% 98%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --border: 217 32.6% 17.5%;
+    --input: 217 32.6% 17.5%;
+    --ring: 270 91% 65%;
 
-    --radius: 0.5rem;
+    /* Custom portfolio colors */
+    --primary-glow: 270 91% 75%;
+    --accent-glow: 142 76% 46%;
+    --purple-accent: 285 85% 60%;
+    --blue-accent: 217 91% 59.8%;
+    --orange-accent: 25 95% 53%;
+
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(270 91% 65%), hsl(217 91% 59.8%));
+    --gradient-secondary: linear-gradient(135deg, hsl(142 76% 36%), hsl(285 85% 60%));
+    --gradient-hero: linear-gradient(135deg, hsl(222 84% 4.9%) 0%, hsl(217 32.6% 17.5%) 100%);
+    --gradient-card: linear-gradient(145deg, hsl(217 32.6% 17.5%), hsl(222 84% 4.9%));
+
+    /* Shadows and glows */
+    --shadow-glow: 0 0 30px hsl(270 91% 65% / 0.3);
+    --shadow-card: 0 8px 32px hsl(222 84% 4.9% / 0.5);
+    --shadow-intense: 0 0 60px hsl(270 91% 65% / 0.4);
+
+    --radius: 0.75rem;
 
     --sidebar-background: 0 0% 98%;
 
@@ -100,6 +116,75 @@ All colors MUST be HSL.
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-sans;
+  }
+}
+
+@layer components {
+  /* Custom portfolio animations */
+  .typing-animation {
+    @apply animate-pulse;
+  }
+
+  .glow-effect {
+    box-shadow: var(--shadow-glow);
+  }
+
+  .card-hover {
+    @apply transition-all duration-300 hover:scale-105;
+    box-shadow: var(--shadow-card);
+  }
+
+  .card-hover:hover {
+    box-shadow: var(--shadow-intense);
+  }
+
+  .gradient-text {
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .hero-bg {
+    background: var(--gradient-hero);
+  }
+
+  .card-bg {
+    background: var(--gradient-card);
+  }
+
+  /* Animations */
+  @keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+  }
+
+  @keyframes pulse-glow {
+    0%, 100% { box-shadow: 0 0 20px hsl(270 91% 65% / 0.3); }
+    50% { box-shadow: 0 0 40px hsl(270 91% 65% / 0.6); }
+  }
+
+  @keyframes fade-in-up {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .float-animation {
+    animation: float 6s ease-in-out infinite;
+  }
+
+  .pulse-glow-animation {
+    animation: pulse-glow 3s ease-in-out infinite;
+  }
+
+  .fade-in-up {
+    animation: fade-in-up 0.8s ease-out forwards;
   }
 }
