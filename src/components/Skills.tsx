@@ -6,37 +6,37 @@ const Skills = () => {
     {
       title: "Frontend Frameworks",
       icon: Code2,
-      skills: ["React.js", "Next.js", "Vue.js", "Angular", "TypeScript"],
+      skills: ["React.js", "Next.js", "TypeScript"],
       gradient: "bg-gradient-primary"
     },
     {
       title: "Languages & Core",
       icon: Code2,
-      skills: ["JavaScript", "TypeScript", "HTML5", "CSS3", "Python"],
+      skills: ["JavaScript", "TypeScript", "HTML5", "CSS3"],
       gradient: "bg-gradient-secondary"
     },
     {
       title: "Styling & UI",
       icon: Palette,
-      skills: ["Tailwind CSS", "Styled Components", "SASS/SCSS", "Framer Motion", "Three.js"],
+      skills: ["Tailwind CSS", "Styled Components", "SASS/SCSS", "Bootstrap", "React Bootstrap",],
       gradient: "bg-gradient-neon"
     },
     {
       title: "Tools & DevOps",
       icon: Wrench,
-      skills: ["Git", "Docker", "Webpack", "Vite", "ESLint", "Jest"],
+      skills: ["Git", "Chrome Developer Tool", "ESLint", "Jest"],
       gradient: "bg-neon-cyan"
     },
     {
       title: "Backend & Database",
       icon: Database,
-      skills: ["Node.js", "Express.js", "PostgreSQL", "MongoDB", "GraphQL"],
+      skills: ["Node.js", "Express.js", "MongoDB",],
       gradient: "bg-neon-purple"
     },
     {
       title: "Performance & Optimization",
       icon: Zap,
-      skills: ["Code Splitting", "Lazy Loading", "Bundle Optimization", "Web Vitals", "PWA"],
+      skills: ["Code Splitting", "Lazy Loading", "Bundle Optimization", "Debounce", "Optimize Re-renders"],
       gradient: "bg-neon-orange"
     }
   ];
@@ -44,7 +44,7 @@ const Skills = () => {
   const getSkillColor = (index: number) => {
     const colors = [
       "bg-gradient-primary",
-      "bg-gradient-secondary", 
+      "bg-gradient-secondary",
       "bg-purple-accent",
       "bg-blue-accent",
       "bg-accent",
@@ -61,7 +61,7 @@ const Skills = () => {
             My <span className="gradient-text">Skills</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-            I work with modern technologies and frameworks to build scalable, 
+            I work with modern technologies and frameworks to build scalable,
             performant web applications.
           </p>
         </div>
@@ -70,27 +70,27 @@ const Skills = () => {
           {skillCategories.map((category, categoryIndex) => {
             const IconComponent = category.icon;
             return (
-              <div 
+              <div
                 key={category.title}
                 className="group relative bg-gradient-card backdrop-blur-sm rounded-xl p-6 border neon-border card-hover overflow-hidden"
               >
                 {/* Animated background gradient */}
                 <div className={`absolute inset-0 opacity-10 ${category.gradient} blur-xl transition-all duration-500 group-hover:opacity-20`}></div>
-                
+
                 <div className="relative z-10">
                   <div className="flex items-center justify-center mb-4">
                     <div className={`p-3 rounded-lg ${category.gradient} shadow-neon`}>
                       <IconComponent className="w-6 h-6 text-primary-foreground" />
                     </div>
                   </div>
-                  
+
                   <h3 className="text-xl font-semibold mb-6 text-center font-mono">
                     {category.title}
                   </h3>
-                  
+
                   <div className="flex flex-wrap gap-3 justify-center">
                     {category.skills.map((skill, skillIndex) => (
-                      <Badge 
+                      <Badge
                         key={skill}
                         variant="secondary"
                         className="px-3 py-2 text-sm font-medium transition-all duration-300 hover:scale-110 cursor-default neon-border hover:shadow-glow bg-card/80 backdrop-blur-sm font-mono"
@@ -123,8 +123,8 @@ const Skills = () => {
                     Always Learning, Always Building
                   </h3>
                   <p className="leading-relaxed text-muted-foreground">
-                    Technology evolves rapidly, and I thrive on continuous learning. 
-                    Every project is an opportunity to explore new frameworks, optimize performance, 
+                    Technology evolves rapidly, and I thrive on continuous learning.
+                    Every project is an opportunity to explore new frameworks, optimize performance,
                     and craft better user experiences. Code is my canvas, and innovation is my drive.
                   </p>
                 </div>

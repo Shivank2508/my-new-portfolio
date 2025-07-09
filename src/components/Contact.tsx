@@ -10,20 +10,20 @@ const Contact = () => {
     {
       icon: Mail,
       title: "Email",
-      value: "your.email@example.com",
-      link: "mailto:your.email@example.com"
+      value: "tyagishivank1212@gmail.com",
+      link: "mailto:tyagishivank1212@gmail.com"
     },
     {
       icon: Phone,
       title: "Phone",
-      value: "+1 (555) 123-4567",
-      link: "tel:+15551234567"
+      value: "+918923212675",
+      link: "tel:+918923212675"
     },
     {
       icon: MapPin,
       title: "Location",
-      value: "Your City, Country",
-      link: "#"
+      value: "chandigarh",
+      link: "https://maps.app.goo.gl/bndB83iSSQaskbKw8"
     }
   ];
 
@@ -31,13 +31,13 @@ const Contact = () => {
     {
       icon: Github,
       name: "GitHub",
-      url: "https://github.com/yourusername",
+      url: "https://github.com/Shivank2508",
       color: "hover:text-foreground"
     },
     {
       icon: Linkedin,
       name: "LinkedIn",
-      url: "https://linkedin.com/in/yourusername",
+      url: "https://www.linkedin.com/in/shivank-tyagi-a75ba91a0/",
       color: "hover:text-blue-accent"
     },
     {
@@ -62,7 +62,7 @@ const Contact = () => {
             Get In <span className="gradient-text">Touch</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-            I'm always interested in new opportunities and exciting projects. 
+            I'm always interested in new opportunities and exciting projects.
             Let's discuss how we can work together!
           </p>
         </div>
@@ -73,8 +73,8 @@ const Contact = () => {
             <div>
               <h3 className="text-2xl font-bold mb-6">Let's Connect</h3>
               <p className="text-muted-foreground mb-8 leading-relaxed">
-                I'm currently available for freelance work and full-time opportunities. 
-                Whether you have a project in mind or just want to chat about frontend 
+                I'm currently available for freelance work and full-time opportunities.
+                Whether you have a project in mind or just want to chat about frontend
                 development, I'd love to hear from you.
               </p>
             </div>
@@ -90,8 +90,9 @@ const Contact = () => {
                     {info.link === "#" ? (
                       <p className="text-muted-foreground">{info.value}</p>
                     ) : (
-                      <a 
-                        href={info.link} 
+                      <a
+                        href={info.link}
+                        target="_blank"
                         className="text-muted-foreground hover:text-primary transition-colors duration-300"
                       >
                         {info.value}
@@ -134,57 +135,57 @@ const Contact = () => {
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <div className="space-y-2">
                     <Label htmlFor="firstName">First Name</Label>
-                    <Input 
-                      id="firstName" 
-                      placeholder="John" 
+                    <Input
+                      id="firstName"
+                      placeholder="Enter Your First Name"
                       className="bg-background/50 border-border focus:border-primary"
-                      required 
+                      required
                     />
                   </div>
                   <div className="space-y-2">
                     <Label htmlFor="lastName">Last Name</Label>
-                    <Input 
-                      id="lastName" 
-                      placeholder="Doe" 
+                    <Input
+                      id="lastName"
+                      placeholder="Enter Your Last Name"
                       className="bg-background/50 border-border focus:border-primary"
-                      required 
+                      required
                     />
                   </div>
                 </div>
 
                 <div className="space-y-2">
                   <Label htmlFor="email">Email</Label>
-                  <Input 
-                    id="email" 
-                    type="email" 
-                    placeholder="john.doe@example.com" 
+                  <Input
+                    id="email"
+                    type="email"
+                    placeholder="Enter Your Email"
                     className="bg-background/50 border-border focus:border-primary"
-                    required 
+                    required
                   />
                 </div>
 
                 <div className="space-y-2">
                   <Label htmlFor="subject">Subject</Label>
-                  <Input 
-                    id="subject" 
-                    placeholder="Let's work together!" 
+                  <Input
+                    id="subject"
+                    placeholder="Let's work together!"
                     className="bg-background/50 border-border focus:border-primary"
-                    required 
+                    required
                   />
                 </div>
 
                 <div className="space-y-2">
                   <Label htmlFor="message">Message</Label>
-                  <Textarea 
-                    id="message" 
-                    placeholder="Tell me about your project or just say hello..." 
+                  <Textarea
+                    id="message"
+                    placeholder="Tell me about your project or just say hello..."
                     className="bg-background/50 border-border focus:border-primary min-h-[120px] resize-none"
-                    required 
+                    required
                   />
                 </div>
 
-                <Button 
-                  type="submit" 
+                <Button
+                  type="submit"
                   className="w-full bg-gradient-primary hover:scale-105 transition-all duration-300 glow-effect"
                   size="lg"
                 >

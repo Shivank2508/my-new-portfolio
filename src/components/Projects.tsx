@@ -6,21 +6,21 @@ import { ExternalLink, Github, Code, Zap, Layers, Terminal } from "lucide-react"
 const Projects = () => {
   const projects = [
     {
-      title: "E-Commerce Platform",
-      description: "A full-featured e-commerce platform built with Next.js, featuring user authentication, payment integration, and admin dashboard.",
+      title: "Bhashni",
+      description: " Developed the official website for Bhashni, a government initiative aimed at facilitating language exchange and promoting linguistic diversity.",
       image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d",
-      technologies: ["Next.js", "TypeScript", "Stripe", "Tailwind CSS", "MongoDB"],
-      liveUrl: "https://example.com",
-      githubUrl: "https://github.com/yourusername/ecommerce-platform",
+      technologies: ["React.js", "TypeScript", "Bootstrap", "Redux"],
+      liveUrl: "https://bhashini.gov.in/bhashadaan/en/home",
+      githubUrl: null,
       featured: true
     },
     {
-      title: "Task Management App",
-      description: "A collaborative task management application with real-time updates, drag-and-drop functionality, and team features.",
+      title: "Soul Of Braj",
+      description: "Developed the website for Soul of Braj Federation to highlight their non-profit initiatives and boost community engagement",
       image: "https://images.unsplash.com/photo-1611224923853-80b023f02d71",
       technologies: ["React.js", "Firebase", "Material-UI", "Context API"],
-      liveUrl: "https://example.com",
-      githubUrl: "https://github.com/yourusername/task-manager",
+      liveUrl: "https://www.sobf.in/",
+      githubUrl: null,
       featured: true
     },
     {
@@ -82,14 +82,14 @@ const Projects = () => {
           {featuredProjects.map((project, index) => (
             <Card key={project.title} className="card-bg border-border card-hover overflow-hidden group">
               <div className="relative overflow-hidden">
-                <img 
-                  src={project.image} 
+                <img
+                  src={project.image}
                   alt={project.title}
                   className="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-105"
                 />
                 <div className="absolute inset-0 bg-gradient-primary opacity-0 group-hover:opacity-20 transition-opacity duration-300"></div>
               </div>
-              
+
               <CardHeader>
                 <div className="flex items-center justify-between">
                   <CardTitle className="text-xl font-bold">{project.title}</CardTitle>
@@ -112,8 +112,8 @@ const Projects = () => {
                 </div>
 
                 <div className="flex gap-3">
-                  <Button 
-                    size="sm" 
+                  <Button
+                    size="sm"
                     className="flex-1 bg-gradient-primary hover:scale-105 transition-all duration-300"
                     asChild
                   >
@@ -122,18 +122,18 @@ const Projects = () => {
                       Live Demo
                     </a>
                   </Button>
-                  
-                  <Button 
-                    variant="outline" 
-                    size="sm" 
-                    className="flex-1 border-primary text-primary hover:bg-primary hover:text-primary-foreground"
-                    asChild
-                  >
-                    <a href={project.githubUrl} target="_blank" rel="noopener noreferrer">
-                      <Github className="w-4 h-4 mr-2" />
-                      Code
-                    </a>
-                  </Button>
+                  {project.githubUrl &&
+                    < Button
+                      variant="outline"
+                      size="sm"
+                      className="flex-1 border-primary text-primary hover:bg-primary hover:text-primary-foreground"
+                      asChild
+                    >
+                      <a href={project.githubUrl} target="_blank" rel="noopener noreferrer">
+                        <Github className="w-4 h-4 mr-2" />
+                        Code
+                      </a>
+                    </Button>}
                 </div>
               </CardContent>
             </Card>
@@ -147,13 +147,13 @@ const Projects = () => {
             {otherProjects.map((project, index) => (
               <Card key={project.title} className="card-bg border-border card-hover overflow-hidden group">
                 <div className="relative overflow-hidden">
-                  <img 
-                    src={project.image} 
+                  <img
+                    src={project.image}
                     alt={project.title}
                     className="w-full h-32 object-cover transition-transform duration-300 group-hover:scale-105"
                   />
                 </div>
-                
+
                 <CardHeader className="pb-3">
                   <CardTitle className="text-lg">{project.title}</CardTitle>
                   <CardDescription className="text-sm text-muted-foreground line-clamp-2">
@@ -176,8 +176,8 @@ const Projects = () => {
                   </div>
 
                   <div className="flex gap-2">
-                    <Button 
-                      size="sm" 
+                    <Button
+                      size="sm"
                       variant="outline"
                       className="flex-1 text-xs border-primary text-primary hover:bg-primary hover:text-primary-foreground"
                       asChild
@@ -187,9 +187,9 @@ const Projects = () => {
                         Demo
                       </a>
                     </Button>
-                    
-                    <Button 
-                      size="sm" 
+
+                    <Button
+                      size="sm"
                       variant="outline"
                       className="flex-1 text-xs"
                       asChild
@@ -207,8 +207,8 @@ const Projects = () => {
         </div>
 
         <div className="text-center">
-          <Button 
-            variant="outline" 
+          <Button
+            variant="outline"
             size="lg"
             className="border-primary text-primary hover:bg-primary hover:text-primary-foreground transition-all duration-300"
             asChild

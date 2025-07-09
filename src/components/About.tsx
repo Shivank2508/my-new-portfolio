@@ -37,8 +37,8 @@ const About = () => {
             About <span className="gradient-text">Me</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-            I'm a passionate frontend developer with expertise in React.js and Next.js. 
-            I love creating digital experiences that are not only visually appealing but also 
+            I'm a passionate frontend developer with expertise in React.js and Next.js.
+            I love creating digital experiences that are not only visually appealing but also
             highly functional and user-friendly.
           </p>
         </div>
@@ -47,14 +47,14 @@ const About = () => {
           <div className="space-y-6">
             <h3 className="text-2xl font-semibold mb-4">My Journey</h3>
             <p className="text-muted-foreground leading-relaxed">
-              With several years of experience in frontend development, I've had the opportunity 
-              to work on diverse projects ranging from small business websites to large-scale 
-              web applications. My expertise lies in modern JavaScript frameworks, particularly 
+              With several years of experience in frontend development, I've had the opportunity
+              to work on diverse projects ranging from small business websites to large-scale
+              web applications. My expertise lies in modern JavaScript frameworks, particularly
               React.js and Next.js.
             </p>
             <p className="text-muted-foreground leading-relaxed">
-              I'm constantly learning and staying up-to-date with the latest technologies and 
-              best practices in web development. I believe in writing clean, maintainable code 
+              I'm constantly learning and staying up-to-date with the latest technologies and
+              best practices in web development. I believe in writing clean, maintainable code
               and creating user experiences that make a difference.
             </p>
           </div>
@@ -90,12 +90,12 @@ const About = () => {
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
               <div className="group">
-                <div className="text-4xl font-bold font-mono mb-2 bg-gradient-primary bg-clip-text text-transparent neon-pulse-animation">5+</div>
+                <div className="text-4xl font-bold font-mono mb-2 bg-gradient-primary bg-clip-text text-transparent neon-pulse-animation">3+</div>
                 <div className="text-muted-foreground font-mono">Years Experience</div>
                 <div className="text-xs text-terminal-green mt-1 opacity-0 group-hover:opacity-100 transition-opacity">console.log('experience++');</div>
               </div>
               <div className="group">
-                <div className="text-4xl font-bold font-mono mb-2 bg-gradient-secondary bg-clip-text text-transparent neon-pulse-animation">100+</div>
+                <div className="text-4xl font-bold font-mono mb-2 bg-gradient-secondary bg-clip-text text-transparent neon-pulse-animation">25+</div>
                 <div className="text-muted-foreground font-mono">Projects Built</div>
                 <div className="text-xs text-terminal-green mt-1 opacity-0 group-hover:opacity-100 transition-opacity">git commit -m "shipped"</div>
               </div>
