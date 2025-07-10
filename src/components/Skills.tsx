@@ -6,7 +6,7 @@ const Skills = () => {
     {
       title: "Frontend Frameworks",
       icon: Code2,
-      skills: ["React.js", "Next.js", "TypeScript"],
+      skills: ["React.js", "Next.js", "TypeScript", "Axios", "Formik"],
       gradient: "bg-gradient-primary"
     },
     {
@@ -36,7 +36,7 @@ const Skills = () => {
     {
       title: "Performance & Optimization",
       icon: Zap,
-      skills: ["Code Splitting", "Lazy Loading", "Bundle Optimization", "Debounce", "Optimize Re-renders"],
+      skills: ["Code Splitting", "Lazy Loading", "Debounce", "Optimize Re-renders"],
       gradient: "bg-neon-orange"
     }
   ];

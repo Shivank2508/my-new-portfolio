@@ -11,7 +11,6 @@ const Hero = () => {
     const interval = setInterval(() => {
       setCurrentIndex((prev) => (prev + 1) % texts.length);
     }, 3000);
-
     return () => clearInterval(interval);
   }, []);
 
@@ -116,7 +115,7 @@ const Hero = () => {
 
           {/* Enhanced social links with tech theme */}
           <div className="flex justify-center space-x-8">
-            <a href="https://github.com" target="_blank" rel="noopener noreferrer"
+            <a href="https://github.com/Shivank2508" target="_blank" rel="noopener noreferrer"
               className="group relative text-muted-foreground hover:text-neon-green transition-all duration-300 hover:scale-110 transform">
               <Github className="w-8 h-8" />
               <div className="absolute -bottom-8 left-1/2 transform -translate-x-1/2 text-xs opacity-0 group-hover:opacity-100 transition-opacity">
@@ -130,7 +129,7 @@ const Hero = () => {
                 LinkedIn
               </div>
             </a>
-            <a href="mailto:your.email@example.com"
+            <a href="mailto:tyagishivank1212@gmail.com"
               className="group relative text-muted-foreground hover:text-neon-purple transition-all duration-300 hover:scale-110 transform">
               <Mail className="w-8 h-8" />
               <div className="absolute -bottom-8 left-1/2 transform -translate-x-1/2 text-xs opacity-0 group-hover:opacity-100 transition-opacity">

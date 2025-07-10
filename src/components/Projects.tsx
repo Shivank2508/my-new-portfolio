@@ -24,39 +24,39 @@ const Projects = () => {
       featured: true
     },
     {
-      title: "Weather Dashboard",
-      description: "A responsive weather dashboard showing current conditions and forecasts with beautiful animations and charts.",
+      title: "Projects And Telecalling Management Portal",
+      description: "A unified portal to manage projects and telecalling activities, track leads, assign tasks, and monitor performance",
       image: "https://images.unsplash.com/photo-1504608524841-42fe6f032b4b",
-      technologies: ["React.js", "Chart.js", "Weather API", "CSS3"],
-      liveUrl: "https://example.com",
-      githubUrl: "https://github.com/yourusername/weather-dashboard",
+      technologies: ["React.js", "Redux", "Axios", "Context", "SASS", "Formik"],
+      liveUrl: "https://app.repayrewards.com/auth",
+      githubUrl: null,
       featured: false
     },
     {
       title: "Portfolio Website",
       description: "A creative portfolio website showcasing modern design principles and smooth animations.",
       image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f",
-      technologies: ["React.js", "Framer Motion", "Tailwind CSS", "Vite"],
-      liveUrl: "https://example.com",
-      githubUrl: "https://github.com/yourusername/portfolio",
+      technologies: ["Next.js", "Context", "Bootstrap", "SCSS"],
+      liveUrl: "https://shivanktyagi-9084e.web.app/",
+      githubUrl: "https://github.com/Shivank2508/resume",
       featured: false
     },
     {
-      title: "Social Media Dashboard",
-      description: "A comprehensive social media analytics dashboard with data visualization and reporting features.",
+      title: "Kanatomy",
+      description: "Developed a review portal for NGOs and individuals to highlight their initiatives and boost community engagement.",
       image: "https://images.unsplash.com/photo-1611605698335-8b1569810432",
-      technologies: ["Next.js", "D3.js", "PostgreSQL", "Styled Components"],
-      liveUrl: "https://example.com",
-      githubUrl: "https://github.com/yourusername/social-dashboard",
+      technologies: ["React.js", "Chart.js", "Context", "Styled Components"],
+      liveUrl: "https://kanatomy.com/",
+      githubUrl: null,
       featured: false
     },
     {
-      title: "Learning Platform",
-      description: "An online learning platform with course management, progress tracking, and interactive content.",
+      title: "Redemption Portal",
+      description: "It is like e-commerce portal where users can place redemptions and complete KYC as well.",
       image: "https://images.unsplash.com/photo-1501504905252-473c47e087f8",
-      technologies: ["React.js", "Node.js", "Express.js", "MongoDB", "Socket.io"],
-      liveUrl: "https://example.com",
-      githubUrl: "https://github.com/yourusername/learning-platform",
+      technologies: ["Next.js", "Axios", "Bootstrap", "Context"],
+      liveUrl: "https://app.repayrewards.com/customer/mitr/login",
+      githubUrl: null,
       featured: false
     }
   ];
@@ -188,7 +188,7 @@ const Projects = () => {
                       </a>
                     </Button>
 
-                    <Button
+                    {project.githubUrl && <Button
                       size="sm"
                       variant="outline"
                       className="flex-1 text-xs"
@@ -198,7 +198,7 @@ const Projects = () => {
                         <Github className="w-3 h-3 mr-1" />
                         Code
                       </a>
-                    </Button>
+                    </Button>}
                   </div>
                 </CardContent>
               </Card>
@@ -213,7 +213,7 @@ const Projects = () => {
             className="border-primary text-primary hover:bg-primary hover:text-primary-foreground transition-all duration-300"
             asChild
           >
-            <a href="https://github.com/yourusername" target="_blank" rel="noopener noreferrer">
+            <a href="https://github.com/Shivank2508" target="_blank" rel="noopener noreferrer">
               <Github className="w-5 h-5 mr-2" />
               View All Projects on GitHub
             </a>

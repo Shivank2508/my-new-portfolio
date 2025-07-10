@@ -40,12 +40,6 @@ const Contact = () => {
       url: "https://www.linkedin.com/in/shivank-tyagi-a75ba91a0/",
       color: "hover:text-blue-accent"
     },
-    {
-      icon: Twitter,
-      name: "Twitter",
-      url: "https://twitter.com/yourusername",
-      color: "hover:text-blue-accent"
-    }
   ];
 
   const handleSubmit = (e: React.FormEvent) => {
