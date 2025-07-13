@@ -34,7 +34,7 @@ const Hero = () => {
   };
 
   return (
-    <section className="min-h-screen bg-gradient-hero flex items-center justify-center relative overflow-hidden">
+    <section id="hero" className="min-h-screen bg-gradient-hero flex items-center justify-center relative overflow-hidden">
       {/* Matrix-style background */}
       <div className="absolute inset-0 overflow-hidden">
         {/* Floating neon orbs */}
