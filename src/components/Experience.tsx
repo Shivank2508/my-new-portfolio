@@ -5,53 +5,39 @@ import { Badge } from "@/components/ui/badge";
 const experiences = [
   {
     id: 1,
-    title: "Senior Full Stack Developer",
-    company: "TechCorp Solutions",
-    location: "San Francisco, CA",
-    duration: "2022 - Present",
+    title: "React.js Developer",
+    company: "Innovative Incentives & Rewards Pvt Ltd",
+    location: "Noida, India",
+    duration: "July 2023 - Present",
     type: "Full-time",
-    description: "Led development of scalable web applications using React, Node.js, and cloud technologies. Mentored junior developers and implemented CI/CD pipelines.",
-    technologies: ["React", "TypeScript", "Node.js", "AWS", "PostgreSQL", "Docker"],
+    description: "Developed and maintained responsive React applications. Integrated REST APIs using React Query and improved UI performance with Redux.",
+    technologies: ["React.js", "Redux", "React Query", "JavaScript", "REST API", "Bootstrap"],
     achievements: [
-      "Improved application performance by 40%",
-      "Led team of 5 developers",
-      "Implemented microservices architecture"
+      "Enhanced app performance and scalability",
+      "Integrated React Query for efficient API data handling",
+      "Collaborated with designers for pixel-perfect UI",
+      "Participated in agile development and code reviews"
     ],
     icon: Code
   },
   {
     id: 2,
-    title: "Frontend Developer",
-    company: "StartupHub",
-    location: "Austin, TX",
-    duration: "2020 - 2022",
+    title: "Software Developer",
+    company: "Insphere Solutions Pvt. Ltd.",
+    location: "Gurgaon, India",
+    duration: "March 2022 - June 2023",
     type: "Full-time",
-    description: "Built responsive web applications and mobile-first interfaces. Collaborated with designers to create pixel-perfect implementations.",
-    technologies: ["React", "Vue.js", "SASS", "Jest", "Webpack", "Figma"],
+    description: "Migrated legacy systems to React. Built reusable components and optimized frontend workflows.",
+    technologies: ["React.js", "JavaScript", "HTML5", "CSS3", "REST API", "Tailwind CSS"],
     achievements: [
-      "Reduced bundle size by 35%",
-      "Implemented design system",
-      "Achieved 98% test coverage"
+      "Led migration of legacy app to modern React stack",
+      "Improved frontend maintainability with reusable components",
+      "Worked closely with backend team for seamless API integration"
     ],
     icon: Zap
-  },
-  {
-    id: 3,
-    title: "Junior Developer",
-    company: "CodeFactory",
-    location: "Remote",
-    duration: "2019 - 2020",
-    type: "Contract",
-    description: "Developed feature-rich web applications and learned modern development practices. Contributed to open-source projects.",
-    technologies: ["JavaScript", "Python", "Django", "MySQL", "Git", "Linux"],
-    achievements: [
-      "Delivered 15+ client projects",
-      "Contributed to 5 open-source repos",
-      "Earned AWS certification"
-    ],
-    icon: Trophy
   }
 ];
+
 
 const Experience = () => {
   return (
@@ -89,19 +75,18 @@ const Experience = () => {
         <div className="relative">
           {/* Timeline Line */}
           <div className="absolute left-8 top-0 w-0.5 h-full bg-gradient-primary opacity-30 hidden md:block"></div>
-          
+
           <div className="space-y-8">
             {experiences.map((exp, index) => (
               <div
                 key={exp.id}
-                className={`relative fade-in-up card-hover ${
-                  index % 2 === 0 ? 'md:ml-20' : 'md:ml-20'
-                }`}
+                className={`relative fade-in-up card-hover ${index % 2 === 0 ? 'md:ml-20' : 'md:ml-20'
+                  }`}
                 style={{ animationDelay: `${index * 0.2}s` }}
               >
                 {/* Timeline Dot */}
                 <div className="absolute -left-12 top-6 w-4 h-4 bg-primary rounded-full border-4 border-background hidden md:block glow-effect"></div>
-                
+
                 <Card className="card-bg border-primary/20 neon-border">
                   <CardHeader>
                     <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
@@ -133,12 +118,12 @@ const Experience = () => {
                       </Badge>
                     </div>
                   </CardHeader>
-                  
+
                   <CardContent className="space-y-6">
                     <p className="text-muted-foreground leading-relaxed">
                       {exp.description}
                     </p>
-                    
+
                     {/* Technologies */}
                     <div>
                       <h4 className="text-sm font-semibold text-primary mb-3 flex items-center gap-2">
@@ -157,7 +142,7 @@ const Experience = () => {
                         ))}
                       </div>
                     </div>
-                    
+
                     {/* Achievements */}
                     <div>
                       <h4 className="text-sm font-semibold text-primary mb-3 flex items-center gap-2">
@@ -185,7 +170,7 @@ const Experience = () => {
           <div className="code-block p-6 max-w-md mx-auto">
             <div className="font-mono text-sm">
               <div className="text-code-blue">
-                <span className="text-neon-purple">const</span> nextOpportunity = 
+                <span className="text-neon-purple">const</span> nextOpportunity =
               </div>
               <div className="text-primary ml-4">
                 "Ready for new challenges!"

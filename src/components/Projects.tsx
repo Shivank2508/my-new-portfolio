@@ -8,7 +8,7 @@ const Projects = () => {
     {
       title: "Bhashni",
       description: " Developed the official website for Bhashni, a government initiative aimed at facilitating language exchange and promoting linguistic diversity.",
-      image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d",
+      image: "/project_images/bhashni.png",
       technologies: ["React.js", "TypeScript", "Bootstrap", "Redux"],
       liveUrl: "https://bhashini.gov.in/bhashadaan/en/home",
       githubUrl: null,
@@ -17,7 +17,7 @@ const Projects = () => {
     {
       title: "Soul Of Braj",
       description: "Developed the website for Soul of Braj Federation to highlight their non-profit initiatives and boost community engagement",
-      image: "https://images.unsplash.com/photo-1611224923853-80b023f02d71",
+      image: "/project_images/Soul_of_braj.png",
       technologies: ["React.js", "Firebase", "Material-UI", "Context API"],
       liveUrl: "https://www.sobf.in/",
       githubUrl: null,
@@ -26,7 +26,7 @@ const Projects = () => {
     {
       title: "Projects And Telecalling Management Portal",
       description: "A unified portal to manage projects and telecalling activities, track leads, assign tasks, and monitor performance",
-      image: "https://images.unsplash.com/photo-1504608524841-42fe6f032b4b",
+      image: "/project_images/repay.png",
       technologies: ["React.js", "Redux", "Axios", "Context", "SASS", "Formik"],
       liveUrl: "https://app.repayrewards.com/auth",
       githubUrl: null,
@@ -44,7 +44,7 @@ const Projects = () => {
     {
       title: "Kanatomy",
       description: "Developed a review portal for NGOs and individuals to highlight their initiatives and boost community engagement.",
-      image: "https://images.unsplash.com/photo-1611605698335-8b1569810432",
+      image: "/project_images/kanatomy.jpeg",
       technologies: ["React.js", "Chart.js", "Context", "Styled Components"],
       liveUrl: "https://kanatomy.com/",
       githubUrl: null,
@@ -53,7 +53,7 @@ const Projects = () => {
     {
       title: "Redemption Portal",
       description: "It is like e-commerce portal where users can place redemptions and complete KYC as well.",
-      image: "https://images.unsplash.com/photo-1501504905252-473c47e087f8",
+      image: "/project_images/redemption.png",
       technologies: ["Next.js", "Axios", "Bootstrap", "Context"],
       liveUrl: "https://app.repayrewards.com/customer/mitr/login",
       githubUrl: null,

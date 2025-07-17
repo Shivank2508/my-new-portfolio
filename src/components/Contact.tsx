@@ -4,6 +4,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { Mail, Phone, MapPin, Github, Linkedin, Twitter } from "lucide-react";
+import Swal from "sweetalert2";
 
 const Contact = () => {
   const contactInfo = [
@@ -22,7 +23,7 @@ const Contact = () => {
     {
       icon: MapPin,
       title: "Location",
-      value: "chandigarh",
+      value: "Chandigarh",
       link: "https://maps.app.goo.gl/bndB83iSSQaskbKw8"
     }
   ];
@@ -41,12 +42,27 @@ const Contact = () => {
       color: "hover:text-blue-accent"
     },
   ];
-
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // Handle form submission here
+
+    Swal.fire({
+      icon: "success",
+      title: "Message Sent!",
+      text: "Thanks for reaching out. I’ll get back to you soon.",
+
+      color: "#ffffff",
+      confirmButtonText: "Okay",
+      customClass: {
+        popup: 'swal2-dark-popup',
+        confirmButton: 'swal2-gradient-button'
+      },
+    });
+
+
+    // Optional: Clear form or do any logic here
     console.log("Form submitted");
   };
+
 
   return (
     <section id="contact" className="py-20 px-6 bg-gradient-card">
